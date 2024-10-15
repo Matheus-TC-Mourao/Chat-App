@@ -20,13 +20,13 @@ const ConvexClientProvider = ({ children }: Props) => {
     <ClerkProvider>
       <ConvexProviderWithClerk useAuth={useAuth} client={convex}>
         <Authenticated>{children} </Authenticated>
-        <header className="h-full w-full flex justify-center items-center">
-          <Button>
-            <SignedOut>
+        <SignedOut>
+          <header className="h-full w-full flex justify-center items-center">
+            <Button>
               <SignInButton />
-            </SignedOut>
-          </Button>
-        </header>
+            </Button>
+          </header>
+        </SignedOut>
         <AuthLoading>
           <LoadingLogo />
         </AuthLoading>
