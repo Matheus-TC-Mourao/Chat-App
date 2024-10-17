@@ -1,7 +1,7 @@
 import ItemList from "@/components/shared/item-list/ItemList";
 import React from "react";
 
-type Props = React.PropsWithChildren<{ children: React.ReactNode }>;
+type Props = { children: React.ReactNode };
 
 const ConversationsLayout = ({ children }: Props) => {
   return (
