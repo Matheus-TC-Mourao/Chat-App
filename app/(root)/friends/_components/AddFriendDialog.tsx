@@ -29,6 +29,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { useMutationState } from "@/hooks/useMutationState";
+import { api } from "@/convex/_generated/api";
+import { toast } from "sonner";
+import { ConvexError } from "convex/values";
 
 const addFriendFormSchema = z.object({
   email: z
@@ -38,6 +42,10 @@ const addFriendFormSchema = z.object({
 });
 
 const AddFriendDialog = () => {
+  const { mutate: createRequest, pending } = useMutationState(
+    api.request.create
+  );
+
   const form = useForm<z.infer<typeof addFriendFormSchema>>({
     resolver: zodResolver(addFriendFormSchema),
     defaultValues: {
@@ -45,7 +53,18 @@ const AddFriendDialog = () => {
     },
   });
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (values: z.infer<typeof addFriendFormSchema>) => {
+    await createRequest({ email: values.email })
+      .then(() => {
+        form.reset();
+        toast.success("Friend request sent!");
+      })
+      .catch((error) => {
+        toast.error(
+          error instanceof ConvexError ? error.data : "Unexpcted error occurred"
+        );
+      });
+  };
 
   return (
     <Dialog>
@@ -88,7 +107,7 @@ const AddFriendDialog = () => {
               )}
             />
             <DialogFooter>
-              <Button disabled={false} type="submit">
+              <Button disabled={pending} type="submit">
                 Send
               </Button>
             </DialogFooter>
