@@ -14,7 +14,7 @@ export const useMutationState = (mutationToRun: any) => {
         return res;
       })
       .catch((error) => {
-        return error;
+        throw error;
       })
       .finally(() => setPending(false));
   };
