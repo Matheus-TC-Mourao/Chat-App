@@ -72,11 +72,11 @@ const AddFriendDialog = () => {
     <Dialog>
       <Tooltip>
         <TooltipTrigger>
-          <Button size="icon" variant="outline">
-            <DialogTrigger>
+          <DialogTrigger>
+            <Button size="icon" variant="outline">
               <UserPlus />
-            </DialogTrigger>
-          </Button>
+            </Button>
+          </DialogTrigger>
         </TooltipTrigger>
         <TooltipContent>
           <p>Add Friend</p>
