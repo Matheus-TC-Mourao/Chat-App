@@ -8,6 +8,7 @@ export const remove = mutation({
   },
   handler: async (ctx, args) => {
     const identity = await ctx.auth.getUserIdentity();
+
     if (!identity) {
       throw new Error("Unauthorized");
     }
