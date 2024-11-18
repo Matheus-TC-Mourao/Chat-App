@@ -19,7 +19,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Chat App",
-  description: "chat app",
+  description: "Realtime chat app using NextJs",
 };
 
 export default function RootLayout({
