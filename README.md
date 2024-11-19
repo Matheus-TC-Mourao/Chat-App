@@ -7,7 +7,7 @@ Este projeto é um aplicativo de chat em tempo real, desenvolvido para oferecer 
 ## 🌐 Demo
 
 Você pode acessar o aplicativo hospedado no seguinte endereço:
-**[Chat App - Clique aqui](https://seuprojeto.com)**
+**[Chat App - Clique aqui](https://chat-app-mt.vercel.app/conversations)**
 
 ---
 
