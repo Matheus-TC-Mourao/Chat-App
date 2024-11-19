@@ -1,6 +1,6 @@
 "use client";
 
-import { Home } from "@/app/(root)/page";
+import Home from "@/app/(root)/page";
 import LoadingLogo from "@/components/shared/LoadingLogo";
 import { ClerkProvider, SignedOut, useAuth } from "@clerk/nextjs";
 import { Authenticated, AuthLoading, ConvexReactClient } from "convex/react";
