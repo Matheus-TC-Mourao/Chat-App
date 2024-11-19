@@ -47,32 +47,13 @@ Você pode acessar o aplicativo hospedado no seguinte endereço:
    npm install
    ```
 
-3. **Configure as variáveis de ambiente:**
-   Crie um arquivo `.env.local` com as seguintes informações:
-
-   ```env
-
-   Deployment used by `npx convex dev`
-
-   CONVEX_DEPLOYMENT=
-   NEXT_PUBLIC_CONVEX_URL=
-
-
-   Clerk
-
-   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-   CLERK_SECRET_KEY=
-   CLERK_WEBHOOK_SECRET=
-
-   ```
-
-4. **Inicie o servidor de desenvolvimento:**
+3. **Inicie o servidor de desenvolvimento:**
 
    ```bash
    npm run dev
    ```
 
-5. Acesse o aplicativo no navegador em `http://localhost:3000`.
+4. Acesse o aplicativo no navegador em `http://localhost:3000`.
 
 ---
 
