@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📱 Aplicativo de Chat
 
-## Getting Started
+Este projeto é um aplicativo de chat em tempo real, desenvolvido para oferecer uma experiência de comunicação intuitiva, segura e moderna. Ele utiliza tecnologias de ponta para garantir desempenho e escalabilidade.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Você pode acessar o aplicativo hospedado no seguinte endereço:
+**[Chat App - Clique aqui](https://seuprojeto.com)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tecnologias Utilizadas
 
-## Learn More
+- **Framework:** [Next.js](https://nextjs.org/) - para a construção da interface e roteamento.
+- **Banco de Dados:** [Convex](https://www.convex.dev/) - armazenamento de dados escalável e em tempo real.
+- **Autenticação:** [Clerk](https://clerk.dev/) - gerenciamento de usuários e autenticação segura.
+- **Formulários:** [React Hook Form](https://react-hook-form.com/) - gerenciamento eficiente de formulários.
+- **Validações:** [Zod](https://zod.dev/) - validação de dados confiável e poderosa.
+- **Componentes UI:** [shadcn-ui](https://ui.shadcn.dev/) - para componentes estilizados e consistência visual.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Funcionalidades
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Chat em Tempo Real:** Permite comunicação instantânea entre usuários.
+- **Autenticação Segura:** Cadastro, login e gerenciamento de sessão com Clerk.
+- **Interface Responsiva:** Design adaptado para dispositivos móveis e desktop.
+- **Validações de Formulários:** Campos validados com Zod para evitar erros e inconsistências.
+- **Estilo Moderno:** Componentes estilizados com shadcn-ui para uma experiência visual atraente.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Configuração do Ambiente de Desenvolvimento
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/usuario/repositorio-chat.git
+   cd repositorio-chat
+   ```
+
+2. **Instale as dependências:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure as variáveis de ambiente:**
+   Crie um arquivo `.env.local` com as seguintes informações:
+
+   ```env
+
+   Deployment used by `npx convex dev`
+
+   CONVEX_DEPLOYMENT=
+   NEXT_PUBLIC_CONVEX_URL=
+
+
+   Clerk
+
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+   CLERK_SECRET_KEY=
+   CLERK_WEBHOOK_SECRET=
+
+   ```
+
+4. **Inicie o servidor de desenvolvimento:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. Acesse o aplicativo no navegador em `http://localhost:3000`.
+
+---
+
+## 🔐 Segurança e Boas Práticas
+
+- Dados sensíveis como tokens e URLs de APIs são armazenados em variáveis de ambiente.
+- As validações de entrada de dados utilizam Zod, reduzindo vulnerabilidades como ataques de injeção.
+
+---
+
+## 📌 Contribuindo
+
+1. Faça um fork do repositório.
+2. Crie uma branch para sua funcionalidade (`git checkout -b feature/nova-funcionalidade`).
+3. Envie seu código (`git push origin feature/nova-funcionalidade`).
+4. Abra um Pull Request.
+
+---
+
+## 📞 Contato
+
+Se você tiver dúvidas ou sugestões, entre em contato:</br>
+**Email:** [matheusmouraotc@gmail.com](matheusmouraotc@gmail.com) </br>
+**LinkedIn:** [Matheus Mourão](https://www.linkedin.com/in/matheus-mour%C3%A3o-13a838208/)</br>
+**GitHub:** [@Matheus-TC-Mourao](https://github.com/Matheus-TC-Mourao)
+
+Contribuições são sempre bem-vindas! 🎉
