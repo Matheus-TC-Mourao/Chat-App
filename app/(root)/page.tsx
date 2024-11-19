@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export function Home({ children }: Props) {
+export const Home = ({ children }: Props) => {
   return (
     <div className="h-full w-full flex justify-center items-center">
       <Card className="flex flex-col gap-6 rounded-lg items-center p-10 justify-between bg-orange-900">
@@ -15,4 +15,6 @@ export function Home({ children }: Props) {
       </Card>
     </div>
   );
-}
+};
+
+
