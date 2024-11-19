@@ -2,7 +2,7 @@
 
 import { Home } from "@/app/(root)/page";
 import LoadingLogo from "@/components/shared/LoadingLogo";
-import { ClerkProvider, SignedOut, SignInButton, useAuth } from "@clerk/nextjs";
+import { ClerkProvider, SignedOut, useAuth } from "@clerk/nextjs";
 import { Authenticated, AuthLoading, ConvexReactClient } from "convex/react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import React from "react";
@@ -21,9 +21,7 @@ const ConvexClientProvider = ({ children }: Props) => {
       <ConvexProviderWithClerk useAuth={useAuth} client={convex}>
         <Authenticated>{children} </Authenticated>
         <SignedOut>
-          <Home>
-            <SignInButton />
-          </Home>
+          <Home />
         </SignedOut>
         <AuthLoading>
           <LoadingLogo />
